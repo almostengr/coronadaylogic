@@ -6,21 +6,21 @@ namespace coronadaylogic
     {
 
         static string processInput(string inputText){
-            string returnVal = inputText.ToLower(); 
+            string returnVal = inputText.ToLower();
             return returnVal;
         }
 
         static void Main(string[] args)
         {
             bool daySunday, dayMonday, dayTuesday, dayWednesday,
-                dayThursday, dayFriday, daySaturday; 
+                dayThursday, dayFriday, daySaturday;
 
-            daySunday = dayMonday = dayTuesday = dayWednesday = 
+            daySunday = dayMonday = dayTuesday = dayWednesday =
                 dayThursday = dayFriday = daySaturday = true;
 
             Console.WriteLine("Did my alarm go off? (y/n)");
             string input = Console.ReadLine();
-            
+
             input = processInput(input);
 
             if (input == "y") {
@@ -34,7 +34,7 @@ namespace coronadaylogic
             input = processInput(input);
 
             if (input == "y"){
-                daySunday = dayMonday = dayTuesday = dayWednesday = 
+                daySunday = dayMonday = dayTuesday = dayWednesday =
                     dayFriday = daySaturday = false;
             }
 
@@ -57,7 +57,7 @@ namespace coronadaylogic
                 daySunday = false;
             }
 
-            
+
 
             Console.WriteLine("Did you hear tornado sirens at their tested time?");
             input = Console.ReadLine();
@@ -70,7 +70,7 @@ namespace coronadaylogic
             }
 
 
-            // final results 
+            // final results
             Console.WriteLine("Sunday: " + daySunday);
             Console.WriteLine("Monday: " + dayMonday);
             Console.WriteLine("Tuesday: " + dayTuesday);
