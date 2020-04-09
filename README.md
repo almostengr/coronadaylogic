@@ -1,6 +1,6 @@
-# Corona Day Logic 
+# Corona Day of the Week Logic 
 
-A simple application that asks a series of question to help you determine what day it is
+A simple application that asks a series of question to help you determine what day it is.
 
 ## Purpose 
 
@@ -15,3 +15,7 @@ logic statements in C#.
 
 The initial build of this application was recorded in a YouTube tutorial. You can 
 watch the video via my [YouTube channel](https://youtu.be/QTxtu083l3Q).
+
+## Technology
+
+This application was built using .NET Core and C#. 
