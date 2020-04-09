@@ -4,6 +4,13 @@ namespace coronadaylogic
 {
     class Program
     {
+        private static int isSunday = 0;
+        private static int isMonday = 0;
+        private static int isTuesday = 0;
+        private static int isWednesday = 0;
+        private static int isThursday = 0;
+        private static int isFriday = 0;
+        private static int isSaturday = 0;
 
         static string processInput(string inputText){
             string returnVal = inputText.ToLower();
@@ -12,40 +19,17 @@ namespace coronadaylogic
 
         static void Main(string[] args)
         {
-            bool daySunday, dayMonday, dayTuesday, dayWednesday,
-                dayThursday, dayFriday, daySaturday;
-
-            daySunday = dayMonday = dayTuesday = dayWednesday =
-                dayThursday = dayFriday = daySaturday = true;
-
             Console.WriteLine("Did my alarm go off? (y/n)");
             string input = Console.ReadLine();
 
             input = processInput(input);
 
             if (input == "y") {
-                daySunday = false;
-                daySaturday = false;
-            }
-
-            Console.WriteLine("Is there a newspaper in the driveway? (y/n)");
-            input = Console.ReadLine();
-
-            input = processInput(input);
-
-            if (input == "y"){
-                daySunday = dayMonday = dayTuesday = dayWednesday =
-                    dayFriday = daySaturday = false;
-            }
-
-            Console.WriteLine("Do neighbors have trash cans by the street?");
-            input = Console.ReadLine();
-
-            input = processInput(input);
-
-            if (input == "y"){
-                daySunday = dayMonday = dayWednesday = dayThursday =
-                     daySaturday = false;
+                isMonday++;
+                isTuesday++;
+                isWednesday++;
+                isThursday++;
+                isFriday++;
             }
 
             Console.WriteLine("Did mailman run?");
@@ -54,30 +38,79 @@ namespace coronadaylogic
             input = processInput(input);
 
             if (input == "y"){
-                daySunday = false;
+                isMonday++;
+                isTuesday++;
+                isWednesday++;
+                isThursday++;
+                isFriday++;
+                isSaturday++;
             }
 
+            Console.WriteLine("Is there a newspaper in the driveway? (y/n)");
+            input = Console.ReadLine();
 
+            input = processInput(input);
 
+            if (input == "y"){
+                isThursday++;
+            }
+
+            Console.WriteLine("Do neighbors have trash cans by the street?");
+            input = Console.ReadLine();
+
+            input = processInput(input);
+
+            if (input == "y"){
+                isTuesday++;
+                isFriday++;
+            }
+            
             Console.WriteLine("Did you hear tornado sirens at their tested time?");
             input = Console.ReadLine();
 
             input = processInput(input);
 
             if (input == "y"){
-                daySunday = dayMonday = dayTuesday = dayThursday =
-                     dayFriday = daySaturday = false;
+                isWednesday++;
+            }
+            
+            Console.WriteLine("Did robot vacuum run?");
+            input = Console.ReadLine();
+
+            input = processInput(input);
+
+            if (input == "y"){
+                isMonday++;
+                isWednesday++;
+                isFriday++;
             }
 
+            Console.WriteLine("Did church live stream today?");
+            input = Console.ReadLine();
+            input = processInput(input);
+
+            if (input == "y"){
+                isSunday++;
+            }
+
+            Console.WriteLine("Was there a weather radio test?");
+            input = Console.ReadLine();
+            input = processInput(input);
+
+            if (input == "y"){
+                isWednesday++;
+                isSaturday++;
+            }
 
             // final results
-            Console.WriteLine("Sunday: " + daySunday);
-            Console.WriteLine("Monday: " + dayMonday);
-            Console.WriteLine("Tuesday: " + dayTuesday);
-            Console.WriteLine("Wednesday: " + dayWednesday);
-            Console.WriteLine("Thursday: " + dayThursday);
-            Console.WriteLine("Friday: " + dayFriday);
-            Console.WriteLine("Saturday: " + daySaturday);
+            Console.WriteLine("Today is probably one of the days with the highest value");
+            Console.WriteLine("Sunday: " + isSunday);
+            Console.WriteLine("Monday: " + isMonday);
+            Console.WriteLine("Tuesday: " + isTuesday);
+            Console.WriteLine("Wednesday: " + isWednesday);
+            Console.WriteLine("Thursday: " + isThursday);
+            Console.WriteLine("Friday: " + isFriday);
+            Console.WriteLine("Saturday: " + isSaturday);
         }
     }
 }
