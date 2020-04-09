@@ -19,7 +19,7 @@ namespace coronadaylogic
 
         static void Main(string[] args)
         {
-            Console.WriteLine("Did my alarm go off? (y/n)");
+            Console.Write("Did my alarm go off? (y/n) ");
             string input = Console.ReadLine();
 
             input = processInput(input);
@@ -32,7 +32,7 @@ namespace coronadaylogic
                 isFriday++;
             }
 
-            Console.WriteLine("Did mailman run?");
+            Console.Write("Did mailman run? ");
             input = Console.ReadLine();
 
             input = processInput(input);
@@ -46,7 +46,7 @@ namespace coronadaylogic
                 isSaturday++;
             }
 
-            Console.WriteLine("Is there a newspaper in the driveway? (y/n)");
+            Console.Write("Is there a newspaper in the driveway? ");
             input = Console.ReadLine();
 
             input = processInput(input);
@@ -55,7 +55,7 @@ namespace coronadaylogic
                 isThursday++;
             }
 
-            Console.WriteLine("Do neighbors have trash cans by the street?");
+            Console.Write("Do neighbors have trash cans by the street? ");
             input = Console.ReadLine();
 
             input = processInput(input);
@@ -65,7 +65,7 @@ namespace coronadaylogic
                 isFriday++;
             }
             
-            Console.WriteLine("Did you hear tornado sirens at their tested time?");
+            Console.Write("Did you hear tornado sirens at their tested time? ");
             input = Console.ReadLine();
 
             input = processInput(input);
@@ -74,7 +74,7 @@ namespace coronadaylogic
                 isWednesday++;
             }
             
-            Console.WriteLine("Did robot vacuum run?");
+            Console.Write("Did robot vacuum run? ");
             input = Console.ReadLine();
 
             input = processInput(input);
@@ -85,7 +85,7 @@ namespace coronadaylogic
                 isFriday++;
             }
 
-            Console.WriteLine("Did church live stream today?");
+            Console.Write("Did church live stream today? ");
             input = Console.ReadLine();
             input = processInput(input);
 
@@ -93,7 +93,7 @@ namespace coronadaylogic
                 isSunday++;
             }
 
-            Console.WriteLine("Was there a weather radio test?");
+            Console.Write("Was there a weather radio test? ");
             input = Console.ReadLine();
             input = processInput(input);
 
@@ -103,6 +103,7 @@ namespace coronadaylogic
             }
 
             // final results
+            Console.WriteLine(); // blank line
             Console.WriteLine("Today is probably one of the days with the highest value");
             Console.WriteLine("Sunday: " + isSunday);
             Console.WriteLine("Monday: " + isMonday);
