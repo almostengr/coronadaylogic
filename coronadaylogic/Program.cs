@@ -64,7 +64,7 @@ namespace coronadaylogic
                 isTuesday++;
                 isFriday++;
             }
-            
+
             Console.Write("Did you hear tornado sirens at their tested time? ");
             input = Console.ReadLine();
 
@@ -73,7 +73,7 @@ namespace coronadaylogic
             if (input == "y"){
                 isWednesday++;
             }
-            
+
             Console.Write("Did robot vacuum run? ");
             input = Console.ReadLine();
 
