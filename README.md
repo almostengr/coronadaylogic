@@ -14,4 +14,4 @@ logic statements in C#.
 ## YouTube Tutorial 
 
 The initial build of this application was recorded in a YouTube tutorial. You can 
-watch the video via my YouTube channel at [somelink](#).
+watch the video via my [YouTube channel](https://youtu.be/QTxtu083l3Q).
