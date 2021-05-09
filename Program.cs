@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace coronadaylogic
+namespace Almostengr.CoronaDayLogic
 {
     class Program
     {
